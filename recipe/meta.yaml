@@ -30,9 +30,14 @@ test:
     - jupyter_server_terminals
   commands:
     - pip check
-    # TODO: testing after https://github.com/conda-forge/jupyter_server-feedstock/issues/101
+    - pytest -vv --cov=jupyter_server_terminals --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
   requires:
+    - jupyter_server >=2.0.0rc5
     - pip
+    - pytest >=7.0
+    - pytest-cov
+    - pytest-timeout
+    - pytest-tornasync
 
 about:
   home: https://github.com/jupyter-server/jupyter_server_terminals
