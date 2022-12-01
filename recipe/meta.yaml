@@ -32,10 +32,11 @@ test:
     - pip check
     - pytest -vv --cov=jupyter_server_terminals --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
   requires:
-    - jupyter_server >=2.0.0rc5
+    - jupyter_server >=2.0.0rc8
     - pip
     - pytest >=7.0
     - pytest-cov
+    - pytest-jupyter >=0.5.3
     - pytest-timeout
     - pytest-tornasync
 
