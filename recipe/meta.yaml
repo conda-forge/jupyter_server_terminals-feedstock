@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: jupyter_server_terminals
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-server-terminals/jupyter_server_terminals-{{ version }}.tar.gz
-  sha256: de1e31a286146a2edfaabd1653cadbb59f566f49e1667cc557e2804079ec3570
+  sha256: 0e68cba38eb0f9f2d93f1160e0a7f84b943d0d0c4d2f77eeaabbb4a2919c47c6
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -32,12 +32,12 @@ test:
     - pip check
     - pytest -vv --cov=jupyter_server_terminals --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
   requires:
-    - jupyter_server >=2.0.0rc5
+    - jupyter_server >=2.0.0rc8
     - pip
     - pytest >=7.0
     - pytest-cov
+    - pytest-jupyter-server >=0.5.3
     - pytest-timeout
-    - pytest-tornasync
 
 about:
   home: https://github.com/jupyter-server/jupyter_server_terminals
