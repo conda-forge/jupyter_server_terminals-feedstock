@@ -36,9 +36,8 @@ test:
     - pip
     - pytest >=7.0
     - pytest-cov
-    - pytest-jupyter >=0.5.3
+    - pytest-jupyter-server >=0.5.3
     - pytest-timeout
-    - pytest-tornasync
 
 about:
   home: https://github.com/jupyter-server/jupyter_server_terminals
