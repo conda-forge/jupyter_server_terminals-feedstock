@@ -30,12 +30,13 @@ test:
     - jupyter_server_terminals
   commands:
     - pip check
-    - pytest -vv --cov=jupyter_server_terminals --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
+    - coverage run --source=jupyter_server_terminals --branch -m pytest -vv --color=yes --tb=long
+    - coverage report --show-missing --skip-covered --fail-under=80
   requires:
+    - coverage
     - jupyter_server >=2.0.0rc8
     - pip
     - pytest >=7.0
-    - pytest-cov
     - pytest-jupyter-server >=0.5.3
     - pytest-timeout
 
