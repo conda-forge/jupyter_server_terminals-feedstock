@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: jupyter_server_terminals
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter-server-terminals/jupyter_server_terminals-{{ version }}.tar.gz
-  sha256: ebcd68c9afbf98a480a533e6f3266354336e645536953b7abcc7bdeebc0154a3
+  sha256: 16d3be9cf48be6a1f943f3a6c93c033be259cf4779184c66421709cf63dccfea
 
 build:
   number: 0
