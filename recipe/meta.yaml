@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter-server-terminals/jupyter_server_terminals-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter-server-terminals/jupyter_server_terminals-{{ version }}.tar.gz
   sha256: 5ae0295167220e9ace0edcfdb212afd2b01ee8d179fe6f23c899590e9b8a5269
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -17,9 +17,9 @@ requirements:
   host:
     - hatchling >=1.5
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - terminado >=0.8.3
     # - pywinpty >=2.0.3  # rely on terminado to provide this
 
@@ -39,6 +39,7 @@ test:
     - pytest >=7.0
     - pytest-jupyter-server >=0.5.3
     - pytest-timeout
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyter-server/jupyter_server_terminals
