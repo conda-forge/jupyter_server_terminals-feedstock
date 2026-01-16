@@ -3,11 +3,15 @@ About jupyter_server_terminals-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_server_terminals-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyter-server/jupyter_server_terminals
+Home: https://pypi.org/project/jupyter-server-terminals
 
 Package license: BSD-3-Clause
 
 Summary: A Jupyter Server Extension Providing Terminals.
+
+Development: https://github.com/jupyter-server/jupyter_server_terminals
+
+Documentation: https://jupyter-server-terminals.readthedocs.io/
 
 Current build status
 ====================
